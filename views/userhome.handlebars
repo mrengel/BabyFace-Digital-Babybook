@@ -1,0 +1,28 @@
+<div class="container">
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8">
+				<div class="panel panel-default">
+					<h1>Welcome {{username}}</h1>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<h4>Add A Child</h4>
+				<form action="/api/child" method="post">
+					<input type="hidden" name="userName" value="{{username}}">
+					<input type="hidden" name="userId" value="{{userId}}">
+	  				<input type="text" class="form-control" placeholder="Child's Name" name="name">
+	  				<input type="date" class="form-control" placeholder="Date of Birth" name="dob">
+					<button class="btn btn-default" type="submit">Add A Child</button>
+				</form>
+			<h4>Select Child</h4>
+			<ul>
+                {{#each children}}
+                    <form action="/api/memory/{{this.id}}/{{this.name}}" method="get">
+                        <button class="btn btn-default" type="submit">{{this.name}}</button>
+                    </form>
+                {{/each}}
+            </ul>
+		</div>
+</div>

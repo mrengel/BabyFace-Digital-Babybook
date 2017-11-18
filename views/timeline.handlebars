@@ -1,0 +1,46 @@
+<div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="panel panel-default">
+                    <h1>Timeline For {{childName}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <h4>Add A Memory</h4>
+                <form action="/api/memory" method="post" id="addMemoryForm">
+                    <input type="hidden" name="childName" value="{{childName}}">
+                    <input type="hidden" name="userId" value="{{userId}}">
+                    <input type="hidden" name="childId" value="{{childId}}">
+                      <input type="text" class="form-control" placeholder="Memory Title" name="title">
+                      <input type="date" name="date">
+                      <input type="file" onchange="readURL(this)" class="form-control" placeholder="Upload image" aria-label="Password" aria-describedby="" name="image">
+                      <textarea rows="4" cols="50" name="caption" form="addMemoryForm">Describe Memory...</textarea>
+                    <button class="btn btn-default" type="submit">Add Memory</button>
+                </form>
+                <ul>
+                {{#each children}}
+                    <form action="/api/memory/{{this.id}}" method="get">
+                        <button class="btn btn-default" type="submit">{{this.name}}</button>
+                    </form>
+                {{/each}}
+            </ul>
+        
+            <h4>Memories!!!</h4>
+                <ul>
+                    {{#each childMemory}}
+                                                    
+                        
+                            <h4>Title: {{this.title}}</h4>
+                            <img class="family" src="http://www.storeitfoods.com/files/1730690/uploaded/Happy%20Family.jpg">
+                        
+                        <div class="info col-lg-6">
+                            <h5>~{{this.date}}~</h5>
+                            <p>~{{this.caption}}<p>
+                        </div>    
+                        
+                    {{/each}}
+                </ul>
+        </div>
+</div>

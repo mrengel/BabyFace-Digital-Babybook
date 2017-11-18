@@ -1,0 +1,63 @@
+.jumbotron {
+	/*background-color: #faebd7;*/
+	background-color: #FEFDB0;
+}
+
+
+
+body{
+	background-image: url(/images/clouds.png);
+	height: 100%;
+}
+
+h3{
+	text-align: center;
+	font-family: 'Love Ya Like A Sister', cursive;
+	font-size: 35px;
+	color: #6B6565;
+	margin-top: 0;
+    margin-left: 27%;
+
+}
+
+
+h1{
+	font-family: 'Love Ya Like A Sister', cursive;
+	margin-left: 8%; 
+}
+
+input, button{
+	margin: 10px !important;
+}
+
+h4{
+	font-family: 'Love Ya Like A Sister', cursive;
+	margin-left: 10px;
+	color: #6B6565;
+}
+
+.panel{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #B4B1B1;
+
+}
+
+input{
+	width: 90% !important;
+}
+
+p, h5{
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.family{
+	height: 188px;
+	width: 250px;
+}
+
+.info{
+	padding-left: 30px;
+}
+
+

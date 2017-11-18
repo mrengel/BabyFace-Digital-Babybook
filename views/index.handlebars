@@ -1,0 +1,23 @@
+	{{#if notFound}}
+	<div class="alert alert-danger" role="alert">NOT FOUND!!!!</div>
+	{{/if}}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2"></div>
+			<div class="col-lg-8">
+				<div class="panel panel-default">
+					<h4>Login to BabyFace</h4>
+					<!--<div class="input-group" id="log">-->
+						<form action="/api/verify" method="post">
+	  						<input type="text" class="form-control" placeholder="Username" name="username">
+	  						<input type="text" class="form-control" placeholder="Password" name="password">
+							<button class="btn btn-default" type="submit">Log In</button>
+						</form>	
+						<a href="signup">Not a member of BabyFace? Sign Up Here!</a>
+					<!--</div>-->
+				</div>
+				<div class="col-lg-2"></div>
+			</div>
+		</div>
+	</div>
